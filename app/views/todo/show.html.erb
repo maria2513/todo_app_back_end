@@ -4,3 +4,4 @@
 <h2><%= @my_todo.pomodoro_estimate %> pomodoros</h2>
 <h3>todo #<%= params[:id] %></h3>
 <a href="/todo/index">Back</a>
+<a href="/todo/delete/<%= @my_todo.id %>" data-method="delete">Delete</a>
