@@ -2,37 +2,13 @@
     
     
         <ul>
+         <% @my_todo_list.each do |todo| %>
          <li>   
-        <a href="/todo/show/1">  Make the curriculum  </a>
-            <span class="pomodoro-estimate">4 pomodoros</span>
+        <a href="/todo/show/<%= todo.id%>">  <%= todo.description %></a>
+            <span class="pomodoro-estimate"> <%= todo.pomodoro_estimate %> pomodoro </span>
          </li>    
-         <li>    
-        <a href="/todo/show/2"> Buy workshop supplies </a>
-            <span class="pomodoro-estimate"> 3 pomodoros</span>
-         </li>
-         <li>
-        <a href="/todo/show/3">
-            Meet with the volunteer trainers</a>
-            <span class="pomodoro-estimate">2 pomodoros</span>
-         </li>
-         <li> 
-        <a href="/todo/show/4"> Order food for Saturday and Sunday</a>
-            <span class="pomodoro-estimate">1 pomodoro</span>
-         </li>
-         <li>
-        <a href="/todo/show/5"> Check pre-work assignments </a>
-            <span class="pomodoro-estimate">2 pomodoros</span>
-            </li>
-            <li>
-        <a href="/todo/show/6">
-            Send workshop location to all the students  </a>
-            <span class="pomodoro-estimate">1 pomodoro</span>
-            </li>
-        <a href="/todo/show/7">
-            <li>
-            Have a great workshop </a>
-            <span class="pomodoro-estimate">0 pomodoros</span>
-            </li>
+         <% end %>
         </ul>
-        <a href="new.html"> Add To-Do</a>
+        <a href="/todo/new"> Add To-Do</a>
+        
         
